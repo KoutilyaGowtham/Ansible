@@ -1,0 +1,19 @@
+---
+ - hosts: localhost
+   user: root
+   become: yes
+   gather_facts: yes
+   vars:
+    motd_warning: 'Welcome to new World'
+   tasks:
+   - name: sample
+     yum:
+	  name: httpd
+	  state: absent
+	 notify:
+	 -stopservice
+	 handleres:
+	 - name: stopservice
+	   service:
+	   name: httpd
+	   state: restarted
