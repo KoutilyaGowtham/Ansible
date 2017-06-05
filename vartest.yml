@@ -4,7 +4,6 @@
   connection: ssh
   gather_facts: '{{ gather }}'
   vars:
-    myhosts: local
     gather: yes
     pkg: telnet
   tasks:
