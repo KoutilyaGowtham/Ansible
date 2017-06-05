@@ -1,9 +1,8 @@
 --- # Testing how variables work in the vars sesction of a playbook
-- hosts: '{{myhosts}}'
-  remote_user: ansible
-  become_user: root
+- hosts: '{{ myhosts }}'
+  remote_user: root
   connection: ssh
-  gather_facts: '{{gather}}'
+  gather_facts: '{{ gather }}'
   vars:
     myhosts: local
     gather: yes
@@ -11,5 +10,5 @@
   tasks:
   - name: Install the indicated softwaer
     yum:
-      name: '{{pkg}}'
+      name: '{{ pkg }}'
       state: latest
