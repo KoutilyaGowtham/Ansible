@@ -8,12 +8,12 @@
    tasks:
    - name: sample
      yum:
-	  name: httpd
-	  state: absent
-	 notify:
+      name: httpd
+        state: absent
+	notify:
 	 -stopservice
 	 handleres:
 	 - name: stopservice
-	   service:
+	 service:
 	   name: httpd
 	   state: restarted
