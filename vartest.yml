@@ -1,6 +1,8 @@
 --- # Testing how variables work in the vars sesction of a playbook
 - hosts: '{{myhosts}}'
   remote_user: ansible
+  become: yes
+  become_method: sudo
   become_user: root
   connection: ssh
   gather_facts: '{{gather}}'
