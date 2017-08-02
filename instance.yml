@@ -1,9 +1,8 @@
-key_name: ec2-prod-key
-aws_region: us-west-2
-ami_id: ami-cc8de6fc
-instance_type: t1.micro
+key_name: windowsnew
+aws_region: us-east-1
+ami_id: ami-9e2f0988
+instance_type: t2.micro
 
-$ cat basic-create.yml
 ---
 # Basic provisioning example
 - name: Create AWS resources
