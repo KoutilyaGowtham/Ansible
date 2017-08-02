@@ -1,0 +1,9 @@
+---
+# creating an ec2 instance 
+ - name: creating instance
+   hosts: localhost
+   connection: ssh
+   remote_user: user
+   become: true
+   become_method: sudo
+   gather_facts: true
