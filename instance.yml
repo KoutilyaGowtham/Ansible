@@ -8,8 +8,11 @@ $ cat basic-create.yml
 # Basic provisioning example
 - name: Create AWS resources
   hosts: localhost
+  remote_user: user
+  become: true
+  become_method: sudo
   connection: local
-  gather_facts: False
+  gather_facts: true
   tasks:
   - name: Create security group
       module: ec2_group
