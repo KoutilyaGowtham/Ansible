@@ -2,7 +2,6 @@
 # creating an ec2 instance 
  - name: creating instance
    hosts: local
-   connection: ssh
    remote_user: user
    become: true
    become_method: sudo
