@@ -9,6 +9,7 @@
    - name: create an EC2 instance
      local_action:
         module: ec2
+        vpc_id: vpc-1740e56e
         key_name: windowsnew
         region: us-east-1
         group_id: sg-b6f015c7 
