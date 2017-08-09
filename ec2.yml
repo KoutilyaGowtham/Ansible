@@ -9,12 +9,12 @@
    tasks:
    - name: create an EC2 instance
      local_action:
-     module: ec2
-     key_name: windowsnew
-     region: us-east-1
-     group_id: sg-b6f015c7 
-     instance_type: t2.micro
-     image: ami-9e2f0988
-     wait: yes
+        module: ec2
+        key_name: windowsnew
+        region: us-east-1
+        group_id: sg-b6f015c7 
+        instance_type: t2.micro
+        image: ami-9e2f0988
+        wait: yes
      register: basic_ec2
   
