@@ -8,8 +8,8 @@
    become_method: sudo
    gather_facts: true
    tasks:
-   - name: Creating ec2 instances
-     ec2:
+ - name: Creating ec2 instances
+   ec2:
      key_name: windowsnew
      region: us-east-1
      group_id: sg-b6f015c7
