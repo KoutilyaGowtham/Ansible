@@ -7,7 +7,7 @@
    gather_facts: true
    connection: ssh
    tasks:
-  - name: Create security group
+   - name: Create security group
       module: ec2_group
       name: *my-security-group*
       description: "A Security group"
@@ -22,16 +22,15 @@
         - proto: all
           type: all
           cidr_ip: 0.0.0.0/0
-    register: basic_firewall
-
-  - name: create an EC2 instance
-    local_action:
-      module: ec2
-      key_name: windowsnew
-      region: us-east-1
-      group_id: sg-b6f015c7 
-      instance_type: t2.micro
-      image: ami-9e2f0988
-      wait: yes
-    register: basic_ec2
+   register: basic_firewall
+   - name: create an EC2 instance
+     local_action:
+       module: ec2
+       key_name: windowsnew
+       region: us-east-1
+       group_id: sg-b6f015c7 
+       instance_type: t2.micro
+       image: ami-9e2f0988
+       wait: yes
+     register: basic_ec2
   
