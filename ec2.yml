@@ -2,7 +2,7 @@
  - name: Create an EC2 instance
    hosts: local
    remote_user: root
-   become: true
+   become: false
    gather_facts: true
    connection: ssh
    tasks:
