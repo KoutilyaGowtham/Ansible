@@ -8,7 +8,7 @@
    connection: ssh
    tasks:
    - name: Create security group
-      module: ec2_group
+     module: ec2_group
       name: *my-security-group*
       description: "A Security group"
       region: us-east-1
