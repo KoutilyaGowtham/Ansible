@@ -1,14 +1,11 @@
 ---
-# creating an ec2 instance 
- - name: creating instance
+ - name: Create an EC2 instance
    hosts: local
-   remote_user: root
-   connection: ssh
+   remote_user: user
    become: true
    become_method: sudo
    gather_facts: true
-   tasks:
- - name: Creating ec2 instances
+   connection: ssh
    ec2:
      key_name: windowsnew
      region: us-east-1
@@ -21,4 +18,3 @@
      count_tag: env
      exact_count: 1
    register: ec2
-          
