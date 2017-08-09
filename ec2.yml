@@ -3,7 +3,6 @@
    hosts: local
    remote_user: root
    become: true
-   become_method: sudo
    gather_facts: true
    connection: ssh
    tasks:
