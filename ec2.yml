@@ -16,6 +16,7 @@
    tasks:
    - name: Launch the new EC2 Instance
      local_action: ec2 
+                      vpc_id: vpc-1740e56e 
                       group_id={{ group_id }} 
                       instance_type={{ instance_type}} 
                       image={{ image }} 
@@ -23,6 +24,8 @@
                       region={{ region }} 
                       keypair={{ keypair }}
                       count={{count}}
+                      assign_public_ip: yes
+                      vpc_subnet_id: subnet-feec75b6
      register: ec2
    - name: Add the newly created EC2 instance(s) to the local host group (located inside the directory)
      local_action: lineinfile 
