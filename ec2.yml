@@ -1,7 +1,7 @@
 ---
  - name: Create an EC2 instance
    hosts: local
-   remote_user: user
+   remote_user: root
    become: true
    become_method: sudo
    gather_facts: true
