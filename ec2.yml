@@ -1,6 +1,6 @@
 ---
  - name: Create an EC2 instance
-   hosts: localhost
+   hosts: local
    remote_user: root
    become: true
    become_method: sudo
