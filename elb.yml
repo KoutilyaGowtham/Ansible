@@ -26,7 +26,7 @@
         interval: 30 # seconds
         unhealthy_threshold: 2
         healthy_threshold: 10
-      register: awsblog-elb
+   
 
     - name: add the  webservers to the load balancer
       local_action: ec2_elb
