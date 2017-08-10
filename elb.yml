@@ -11,7 +11,7 @@
         aws_secret_key: "{{ lookup('env', 'AWS_SECRET_ACCESS_KEY') }}"
         name: aws-blog-elb
         state: present
-        region: us-east
+        region: us-east-1
         zones:
           - us-east-1
         listeners:
