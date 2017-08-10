@@ -7,6 +7,8 @@
    connection: ssh
    tasks:
     - ec2:
+        aws_access_key: key
+        aws_secret_key: aws_secret
         key_name: windowsnew
         region: us-east-1
         instance_type: t2.micro
