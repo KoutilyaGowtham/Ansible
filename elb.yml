@@ -12,7 +12,7 @@
         name: aws-blog-elb
         state: present
         region: us-east-1
-         zones:		
+        zones:		
           - us-east-1a
         listeners:
           - protocol: http
