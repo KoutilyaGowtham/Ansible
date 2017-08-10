@@ -6,20 +6,21 @@
    connection: ssh
    tasks:
    - name: creating elb using ansible playbook
-     ec2_elb_lb:
-        vpc_id: vpc-1740e56e
-        aws_access_key: "{{ lookup('env', 'AWS_ACCESS_KEY_ID') }}"
-        aws_secret_key: "{{ lookup('env', 'AWS_SECRET_ACCESS_KEY') }}"
-        name: aws-blog-elb
-        state: present
-        region: us-east-1
-        vpc_id: vpc-1740e56e
-        zones:		
-          - us-east-1a
-        listeners:
-          - protocol: http
-            load_balancer_port: 80
-            instance_port: 80
+     - local_action:
+         module:ec2_elb_lb
+         vpc_id: vpc-1740e56e
+         aws_access_key: "{{ lookup('env', 'AWS_ACCESS_KEY_ID') }}"
+         aws_secret_key: "{{ lookup('env', 'AWS_SECRET_ACCESS_KEY') }}"
+         name: aws-blog-elb
+         state: present
+         region: us-east-1
+         vpc_id: vpc-1740e56e
+         zones:		
+           - us-east-1a
+         listeners:
+           - protocol: http
+             load_balancer_port: 80
+             instance_port: 80
      register: aws-blog-elb
    - name: Assigning instances to elb
      local_action: ec2_elb
