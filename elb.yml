@@ -24,9 +24,9 @@
       register: awsblog-elb
    - name: Assigning instances to elb
      local_action: ec2_elb
-      args:
+     args:
         instance_id: "{{ item.id,item.id1 }}"
         ec2_elbs: aws-blog-elb
         state: present
         region: us-east-1
-      with_items: awsblog-webservers.tagged_instances
+     with_items: awsblog-webservers.tagged_instances
