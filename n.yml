@@ -7,8 +7,6 @@
    connection: ssh
    tasks:
     - ec2:
-        aws_access_key: AKIAIQNWUDJYO76D3OSQ
-        aws_secret_key: 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
         key_name: windowsnew
         region: us-east-1
         instance_type: t2.micro
