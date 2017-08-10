@@ -5,7 +5,6 @@
    become: false
    gather_facts: false
    connection: ssh
-   "
    tasks:
     - name: setup a simple load balancer
       ec2_elb_lb:
@@ -38,5 +37,4 @@
         ec2_elbs: aws-blog-elb
         state: present
         region: us-east-1
-      with_items: awsblog-webservers.tagged_instances
-      "
+      with_items: awsblog-webservers.tagged_instance
