@@ -2,6 +2,7 @@
  - name: Giving Credentials
    hosts: local
    remote_user: root
+   become: false
    gather_facts: false
    connection: ssh
    tasks:
