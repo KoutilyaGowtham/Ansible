@@ -8,6 +8,7 @@
    tasks:
     - ec2:
         key_name: windowsnew
+        region: us-east-1
         instance_type: t2.micro
         image: ami-123456
         wait: yes
