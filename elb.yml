@@ -12,8 +12,6 @@
         name: aws-blog-elb
         state: present
         region: us-east-1
-        zones:
-          - us-east-1
         listeners:
           - protocol: http
             load_balancer_port: 80
