@@ -7,7 +7,7 @@
    tasks:
    - name: creating elb using ansible playbook
    - local_action:
-         module:ec2_elb_lb
+         ec2_elb_lb:
          vpc_id: vpc-1740e56e
          aws_access_key: "{{ lookup('env', 'AWS_ACCESS_KEY_ID') }}"
          aws_secret_key: "{{ lookup('env', 'AWS_SECRET_ACCESS_KEY') }}"
