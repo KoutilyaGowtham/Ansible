@@ -25,7 +25,7 @@
    - name: Assigning instances to elb
      local_action: ec2_elb
      args:
-        instance_id: "{{ item.id,item.id1 }}"
+        instance_id: "{{ item.id }}"
         ec2_elbs: aws-blog-elb
         state: present
         region: us-east-1
