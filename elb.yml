@@ -6,7 +6,6 @@
    connection: ssh
    vars:
    item.id: i-0f8578d7f2fb98c2c
-   item.id1: i-0e96a0d55100da4c8
    tasks:
    - name: creating elb using ansible playbook
      ec2_elb_lb:
