@@ -32,7 +32,6 @@
     - name: add the  webservers to the load balancer
       local_action: ec2_elb
       args:
-        vpc_id: vpc-1740e56e
         instance_id: i-0f8578d7f2fb98c2c
         ec2_elbs: aws-blog-elb
         state: present
