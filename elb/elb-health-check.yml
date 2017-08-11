@@ -1,0 +1,7 @@
+--- # Ansible play that uses this script
+ - name: wait for instances to become InService in the ELB
+   shell: 'python "{{health_check_script}}" -r "{{region}}" -k "{{aws_access_key}}" -s "{{aws_secret_key}}" -a "{{asg_name}}"'
+   register: result
+   until: result.rc == 0
+   delay: 10
+   retries: 120
