@@ -17,6 +17,7 @@
         purge_subnets: yes
         zones:
           - us-east-1a
+          - us-east-1b
         listeners:
           - protocol: http
             load_balancer_port: 80
