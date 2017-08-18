@@ -27,7 +27,7 @@
     - name: add the  webservers to the load balancer
       local_action: ec2_elb
       args:
-        instance_id: "{{ item.id }}"
+        instance_id: i-0f8578d7f2fb98c2c
         ec2_elbs: aws-blog-elb
         state: present
         region: us-east-1
