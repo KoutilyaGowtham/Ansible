@@ -4,10 +4,10 @@
    remote_user: root
    connection: ssh
    gather_facts: False
-   aws_access_key: "{{ lookup('env', 'AWS_ACCESS_KEY_ID') }}"
-   aws_secret_key: "{{ lookup('env', 'AWS_SECRET_ACCESS_KEY') }}"
    tasks:
     - name: setup a simple load balancer
+      aws_access_key: "{{ lookup('env', 'AWS_ACCESS_KEY_ID') }}"
+      aws_secret_key: "{{ lookup('env', 'AWS_SECRET_ACCESS_KEY') }}"
       ec2_elb_lb:
         name: aws-blog-elb
         state: present
