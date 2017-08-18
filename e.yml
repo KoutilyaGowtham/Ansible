@@ -14,6 +14,7 @@
         region: us-east-1
         subnets: 'subnet-5de54771,subnet-feec75b6'
         security_group_ids: 'sg-b6f015c7'
+        purge_subnets: yes
         zones:
           - us-east-1a
         listeners:
