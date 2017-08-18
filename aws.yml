@@ -1,0 +1,9 @@
+---
+ - name: Inventory
+   hosts: local
+   remote_user: root
+   gather_facts: false
+   connection: ssh
+   roles:
+    - vpc
+    - ec2
