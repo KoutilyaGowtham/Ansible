@@ -1,0 +1,21 @@
+- name: Start the MySQL service
+  hosts: local
+  remote_user: root
+  gather_facts: false
+  connection: ssh
+  service: 
+    name: mysql 
+    state: started
+    enabled: true
+- name: update mysql root password for all root accounts
+  sudo: yes
+  mysql_user: 
+    name: root 
+    host: localhost 
+    password: "pws"
+    login_user: root
+    login_password: "pws"
+    check_implicit_admin: yes
+    priv: "*.*:ALL,GRANT"
+  
+  
