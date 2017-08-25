@@ -5,7 +5,7 @@
    gather_facts: false
    connection: ssh
  - name: Create S3 bucket
-   - s3_bucket:
+   s3_bucket:
      name: AWS_logs_Creating_22352245
      region: us-east-1
      versioning: yes
