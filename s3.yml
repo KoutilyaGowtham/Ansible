@@ -5,12 +5,12 @@
    gather_facts: false
    connection: ssh
  - name: Create S3 bucket
-   s3_bucket:
-    name: AWS_logs_Creating_22352245
-    region: us-east-1
-    versioning: yes
-    aws_access_key: "{{ lookup('env', 'AWS_ACCESS_KEY_ID') }}"
-    aws_secret_key: "{{ lookup('env', 'AWS_SECRET_ACCESS_KEY') }}"
+   - s3_bucket:
+     name: AWS_logs_Creating_22352245
+     region: us-east-1
+     versioning: yes
+     aws_access_key: "{{ lookup('env', 'AWS_ACCESS_KEY_ID') }}"
+     aws_secret_key: "{{ lookup('env', 'AWS_SECRET_ACCESS_KEY') }}"
    register: s3_url
  - name: Displaying s3 url
    debug: var=s3_url
