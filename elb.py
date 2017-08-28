@@ -14,7 +14,7 @@ manager = Manager(app)
 
 
 def get_elb():
-    elb_conn = boto.ec2.elb.connect_to_region(aws_access_key_id=app.config['AWS_ELB_ACCESS_KEY_ID'], aws_secret_access_key=app.config['AWS_ELB_SECRET_ACCESS_KEY'], region_name='us-west-2')
+    elb_conn = boto.ec2.elb.connect_to_region(aws_access_key_id=app.config['AWS_ACCESS_KEY_ID'], aws_secret_access_key=app.config['AWS_SECRET_ACCESS_KEY'], region_name='us-east-1')
     return elb_conn.get_all_load_balancers([app.config['AWS_ELB_NAME']])[0]
 
 @manager.command
