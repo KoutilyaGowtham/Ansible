@@ -1,9 +1,11 @@
 ---
- - name: Inventory
-   hosts: local
-   remote_user: root
-   gather_facts: false
-   connection: ssh
-   roles:
+- hosts: localhost
+  connection: local
+  gather_facts: no   
+  roles:
     - vpc
-    - ec2
+    - ec2sg
+    - ec2key
+    - ec2instance
+    - elb
+    - rds
