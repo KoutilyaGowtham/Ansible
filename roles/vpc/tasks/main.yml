@@ -33,7 +33,7 @@
   register: public_rt
 
 - name: "Create {{ vpc_name }}.yml file inside the secret_vars directory"
-  lineinfile: 
+  copy: 
     dest: " /var/lib/jenkins/workspace/IGW/secret_vars/{{ vpc_name }}.yml"
     line: "---"
     state: present
