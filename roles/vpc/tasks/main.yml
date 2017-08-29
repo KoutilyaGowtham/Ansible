@@ -34,7 +34,7 @@
 
 - name: "Create {{ vpc_name }}.yml file inside the secret_vars directory"
   lineinfile: 
-    file: " /var/lib/jenkins/workspace/IGW/secret_vars/{{ vpc_name }}.yml"
+    dest: " /var/lib/jenkins/workspace/IGW/secret_vars/{{ vpc_name }}.yml"
     line: "---"
     create: yes
 
