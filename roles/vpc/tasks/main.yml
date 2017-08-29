@@ -36,7 +36,6 @@
   lineinfile: 
     dest: "secret_vars/test.yml"
     line: "---"
-    state: touch
     create: yes
 
 - name: "Write vpc info to {{ vpc_name }}.yml file inside the secret_vars directory"
