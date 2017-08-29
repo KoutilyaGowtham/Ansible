@@ -55,4 +55,4 @@
     line: "{{ item.resource_tags.Alias | upper }}: {{ '\"' + item.id + '\"' }}"
   with_items: "{{ vpc.subnets }}"
   
-- include_vars: "secret_vars/{{ vpc_name }}.yml"
+- include_vars: "/var/lib/jenkins/workspace/IGW/secret_vars/{{ vpc_name }}.yml"
