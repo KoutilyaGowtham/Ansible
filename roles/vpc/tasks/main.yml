@@ -33,9 +33,9 @@
   register: public_rt
 
 - name: "Create {{ vpc_name }}.yml file inside the secret_vars directory"
-  file: 
+  lineinfile: 
     dest: "secret_vars/{{ vpc_name }}.yml"
-    
+    line: "---"
     state: present
     
 
