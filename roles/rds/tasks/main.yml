@@ -13,7 +13,7 @@
     region: "{{ vpc_region }}"
     multi_zone: "{{ rds_multi_zone_option }}"
     subnet: "{{ rds_subnet_group_name }}"
-    vpc_security_groups: "{{ lookup('get_sg_id_from_name', (vpc_region, rds_sg_name)) }}" 
+    vpc_security_groups: sg-b6f015c7 
     instance_name: "{{ rds_instance_name }}"
     db_engine: "{{ rds_db_engine }}"
     size: "{{ rds_db_size }}"
