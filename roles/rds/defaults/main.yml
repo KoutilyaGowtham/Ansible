@@ -3,7 +3,7 @@
 VPC_REGION: us-east-1 # N.Virginia
 RDS_SUBNET_GROUP_NAME: "my_test_subnet_group"
 RDS_SG_DESCRIPTION: "My Subnet Group for wordpress rds instance"
-RDS_SG_SUBNETS:	subnet-feec75b6
+RDS_SG_SUBNETS:	subnet-b1f7559d
 RDS_MULTI_ZONE_OPTION: no
 RDS_SG_NAME: "test_rd_sg"
 RDS_INSTANCE_NAME: "my-test-rds"
