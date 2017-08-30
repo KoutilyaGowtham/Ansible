@@ -4,7 +4,7 @@
     name: "{{ item.name }}"
     description: "{{ item.description }}"
     region: "{{ vpc_region }}" 
-    vpc_id: "{{ VPC_ID }}" # Came from ENV specific secret file
+    vpc_id: "{{ vpc.vpc_id }}" # Came from ENV specific secret file
     state: present
     rules: "{{ item.rules }}"
   with_items: "{{ ec2_security_groups }}"
