@@ -34,14 +34,14 @@
 
 - name: "Create {{ vpc_name }}.yml file inside the secret_vars directory"
   file: 
-    dest: " /var/lib/jenkins/workspace/IGW/secret_vars/{{ vpc_name }}.yml"
+    dest: "secret_vars/{{ vpc_name }}.yml"
     
     state: present
     
 
 - name: "Write vpc info to {{ vpc_name }}.yml file inside the secret_vars directory"
   lineinfile:
-    dest: " /var/lib/jenkins/workspace/IGW/secret_vars/{{ vpc_name }}.yml"
+    dest: " secret_vars/{{ vpc_name }}.yml"
     regexp: "^{{ item.regexp | upper }}"
     line: "{{ item.regexp | upper }}: {{ '\"' + item.line + '\"' }}"
   with_items:
@@ -51,7 +51,7 @@
 
 - name: "Write public and private subnets ids to {{ vpc_name }}.yml file inside the secret_vars directory"
   lineinfile:
-    dest: " /var/lib/jenkins/workspace/IGW/secret_vars/test.yml"
+    dest: " secret_vars/test.yml"
     regexp: "^{{ item.resource_tags.Alias | upper }}"
     line: "{{ item.resource_tags.Alias | upper }}: {{ '\"' + item.id + '\"' }}"
   with_items: "{{ vpc.subnets }}"
