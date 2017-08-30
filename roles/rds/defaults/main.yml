@@ -3,7 +3,7 @@
 VPC_REGION: us-east-1 # N.Virginia
 RDS_SUBNET_GROUP_NAME: "my_test_subnet_group"
 RDS_SG_DESCRIPTION: "My Subnet Group for wordpress rds instance"
-RDS_SG_SUBNETS: []
+RDS_SG_SUBNETS:	subnet-feec75b6
 RDS_MULTI_ZONE_OPTION: no
 RDS_SG_NAME: "test_rd_sg"
 RDS_INSTANCE_NAME: "my-test-rds"
@@ -12,7 +12,7 @@ RDS_DB_SIZE: 5
 RDS_DB_NAME: "rds_test"
 RDS_INSTANCE_TYPE: "db.t2.micro"
 RDS_DB_USERNAME: admin
-RDS_DB_PASSWORD: test
+RDS_DB_PASSWORD: test123
 RDS_BACKUP_RETENTION_PERIOD: 0
 RDS_PUBLICLY_ACCESSIBLE: yes
 RDS_WAIT_TIMEOUT: 300
