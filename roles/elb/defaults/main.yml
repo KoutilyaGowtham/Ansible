@@ -2,7 +2,7 @@
 # Variables that can provide as extra vars
 VPC_REGION: us-east-1 # N.Virginia
 ELB_NAME: "test"
-ELB_SUBNET_ID: []
+ELB_SUBNET_ID: subnet-feec75b6
 ELB_PURGE_SUBNETS: no
 ELB_CROSS_AZ_LOAD_BALANCING: yes
 ELB_PING_PROTOCOL: tcp
