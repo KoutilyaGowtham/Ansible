@@ -1,6 +1,6 @@
 # Variables that can provide as extra vars
 VPC_REGION: us-east-1 # N.Virginia
-GITHUB_USERNAME: no
+GITHUB_USERNAME: KoutilyaGowtham
 EC2_KEY_NAME: "my-default-key"
 LOCAL_USER_SSH_KEY: yes
 
