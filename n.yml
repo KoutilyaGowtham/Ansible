@@ -1,6 +1,6 @@
 ---
  - name: Create an EC2 instance
-   hosts: local
+   hosts: localhost
    remote_user: root
    become: false
    gather_facts: false
