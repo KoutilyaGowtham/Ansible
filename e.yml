@@ -1,6 +1,6 @@
 ---
  - name: spin up the load balancer and add the servers to it
-   hosts: local
+   hosts: localhost
    remote_user: root
    connection: ssh
    gather_facts: False
