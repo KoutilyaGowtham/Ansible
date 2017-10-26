@@ -55,3 +55,4 @@
     search_regex: OpenSSH
     delay: 10
   with_items: "{{ ec2.results | get_ec2_info('public_ip') }}" 
+- include_vars: "secret_vars/{{ vpc_name }}.yml"
