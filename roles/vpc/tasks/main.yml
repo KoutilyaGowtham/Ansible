@@ -32,28 +32,28 @@
         gateway_id: "{{ vpc.igw_id }}"
   register: public_rt
 
-#- name: "Create {{ vpc_name }}.yml file inside the secret_vars directory"
- # lineinfile: 
-  #  dest: /var/lib/jenkins/workspace/IGW/"secret_vars/{{ vpc_name }}.yml"
-   # line: "---"
-    #state: present
+- name: "Create {{ vpc_name }}.yml file inside the secret_vars directory"
+  lineinfile: 
+    dest: "/var/lib/jenkins/workspace/IGW/secret_vars/{{ vpc_name }}.yml"
+    line: "---"
+    state: present
     
 
-#- name: "Write vpc info to {{ vpc_name }}.yml file inside the secret_vars directory"
- # lineinfile:
-  #  dest: " /var/lib/jenkins/workspace/IGW/secret_vars/{{ vpc_name }}.yml"
-   # regexp: "^{{ item.regexp | upper }}"
-    #line: "{{ item.regexp | upper }}: {{ '\"' + item.line + '\"' }}"
-  #with_items:
-   # - { regexp: 'vpc_id', line: '{{ vpc.vpc_id }}' }
-    #- { regexp: 'igw', line: '{{ vpc.igw_id }}' }
-    #- { regexp: 'route_table_id', line: '{{ public_rt.route_table.id }}' }
+- name: "Write vpc info to {{ vpc_name }}.yml file inside the secret_vars directory"
+  lineinfile:
+    dest: " /var/lib/jenkins/workspace/IGW/secret_vars/{{ vpc_name }}.yml"
+    regexp: "^{{ item.regexp | upper }}"
+    line: "{{ item.regexp | upper }}: {{ '\"' + item.line + '\"' }}"
+  with_items:
+    - { regexp: 'vpc_id', line: '{{ vpc.vpc_id }}' }
+    - { regexp: 'igw', line: '{{ vpc.igw_id }}' }
+    - { regexp: 'route_table_id', line: '{{ public_rt.route_table.id }}' }
 
-#- name: "Write public and private subnets ids to {{ vpc_name }}.yml file inside the secret_vars directory"
- # lineinfile:
-  #  dest: " /var/lib/jenkins/workspace/IGW/secret_vars/test.yml"
-   # regexp: "^{{ item.resource_tags.Alias | upper }}"
-    #line: "{{ item.resource_tags.Alias | upper }}: {{ '\"' + item.id + '\"' }}"
-  #with_items: "{{ vpc.subnets }}"
+- name: "Write public and private subnets ids to {{ vpc_name }}.yml file inside the secret_vars directory"
+  lineinfile:
+    dest: " /var/lib/jenkins/workspace/IGW/secret_vars/test.yml"
+    regexp: "^{{ item.resource_tags.Alias | upper }}"
+    line: "{{ item.resource_tags.Alias | upper }}: {{ '\"' + item.id + '\"' }}"
+  with_items: "{{ vpc.subnets }}"
   
-#- include_vars: "/var/lib/jenkins/workspace/IGW/secret_vars/{{ vpc_name }}.yml"
+- include_vars: "/var/lib/jenkins/workspace/IGW/secret_vars/{{ vpc_name }}.yml"
